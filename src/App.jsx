@@ -3,8 +3,8 @@ import './App.css'
 import Search from './Search'
 import MovieList from './MovieList'
 import spiderManImage from './assets/3f360f69-369b-41a1-8183-c32a50804149.jpeg'
-import batManImage from '.assets/Recreation of the batman poster.jpeg'
-import inception from '.assets/ce83dd72-e5de-434c-9f45-90a7103bc4cb.jpeg'
+import batManImage from './assets/Recreation of the batman poster.jpeg'
+import inception from './assets/ce83dd72-e5de-434c-9f45-90a7103bc4cb.jpeg'
 
 const sampleMovies = [
   {
