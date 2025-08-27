@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Search from './Search'
 import MovieList from './MovieList'
+import spiderManImage from './assets/3f360f69-369b-41a1-8183-c32a50804149.jpeg'
 
 
 const sampleMovies = [
@@ -10,7 +11,7 @@ const sampleMovies = [
     Year: "2021",
     imdbID: "tt10872600",
     Type: "movie",
-    Poster: "3f360f69-369b-41a1-8183-c32a50804149.jpeg"
+    Poster: spiderManImage
   },
   {
     Title: "The Batman",
