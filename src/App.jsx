@@ -5,6 +5,7 @@ import MovieList from './MovieList'
 import spiderManImage from './assets/3f360f69-369b-41a1-8183-c32a50804149.jpeg'
 import batManImage from './assets/Recreation of the batman poster.jpeg'
 import inception from './assets/ce83dd72-e5de-434c-9f45-90a7103bc4cb.jpeg'
+import AddMovie from './AddMovie'
 
 const sampleMovies = [
   {
@@ -32,7 +33,18 @@ const sampleMovies = [
 
 
 function App() {
-  const [movies, setMovies] = useState(sampleMovies);
+  const [movies, setMovies] = useState(sampleMovies);  //initial state
+
+  //Add movie
+  const addMovie = (movie) => {
+    setMovies([...movies, movie]);
+  };
+  
+  //Delete
+  const deleteMovie = (id) => {
+    setMovies(movies.filter((m) => m.imdbID !== id));
+  };
+
 
   // Fetvhing from API
   const fetchMovies = async (query) => {
@@ -58,7 +70,9 @@ function App() {
     <div className="App">
       <h1>BingeBox</h1>
       <Search onSearch={fetchMovies} />
-      <MovieList movies={movies} />
+      <AddMovie onAdd={addMovie} />
+      <MovieList movies={movies} onDelete={deleteMovie} />
+      
       
     </div>
   );

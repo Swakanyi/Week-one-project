@@ -20,6 +20,8 @@ function Search ( {onSearch} ) {
       <div>
         <button type="submit" className="btn"> Search</button>
       </div>
+
+      
     </form>
   )
 }
