@@ -2,6 +2,7 @@ import { useState } from 'react'
 import './App.css'
 import Search from './Search'
 import MovieList from './MovieList'
+import Movies from './Movies';
 
 const sampleMovies = [
   {
@@ -56,6 +57,7 @@ function App() {
       <h1>BingeBox</h1>
       <Search onSearch={fetchMovies} />
       <MovieList movies={movies} />
+      <Movies />
     </div>
   );
 }
